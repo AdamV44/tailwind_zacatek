@@ -1,4 +1,70 @@
 @import "tailwindcss";
 @theme {
-    --color-primary: #74C69D; 
+ --color-primary: #74C69D;   /* zelená */
+  --color-secondary: #2E2E2E; /* tmavý text */
+  --color-accent: #3B82F6;    /* modrá akce */
+  --color-background: #F9FAFB; /* světle šedé pozadí */
+  --color-card: #FFFFFF;       /* bílé karty */
+  --color-muted: #6B7280;      /* popisky, slabší text */
+
+  --font-serif: 'Crimson Text', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --font-size-hero: 2.5rem;     /* 40px */
+  --font-size-subtitle: 1.25rem;/* 20px */
+
+  --spacing-section: 6rem;
+  --spacing-card-gap: 1.5rem;
+
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+}
+/* BASE – základní styly (např. nastavení písma) */
+@layer base {
+  body {
+    @apply bg-[var(--color-background)] text-[var(--color-secondary)] font-[var(--font-sans)];
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+}
+
+/* COMPONENTS – vlastní třídy pro komponenty */
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--color-primary)] text-white px-6 py-2 rounded-xl hover:bg-green-600 transition;
+  }
+
+  .card {
+    @apply bg-[var(--color-card)] rounded-xl shadow-md p-6;
+  }
+
+  .section {
+    @apply py-[var(--spacing-section)] text-center;
+  }
+}
+
+/* UTILITIES – pokud chceš přidat vlastní utility třídy */
+@layer utilities {
+  .text-hero {
+    font-size: var(--font-size-hero);
+    font-family: var(--font-serif);
+  }
+
+  .text-subtitle {
+    font-size: var(--font-size-subtitle);
+    color: var(--color-muted);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
 }

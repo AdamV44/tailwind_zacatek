@@ -6,11 +6,60 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline bg-primary text-center">
-    Hello world!
-  </h1>
-  <div class="flex justify-center">
-    <button class="bg-primary hover:bg-amber-900 py-2 px-4 hover:text-white shadow-2xs rounded-2xl">clickme</button>
-  </div>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Můj Tailwind Web</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="font-serif bg-[var(--color-background)] text-[var(--color-secondary)]">
+
+  <!-- Hero Sekce -->
+  <section class="section text-center">
+    <h1 class="text-hero font-bold">Získejte přehled, který pomůže vašemu podnikání růst.</h1>
+    <p class="text-subtitle mt-4 max-w-xl mx-auto">Objevte výhody datové analytiky a přijímejte lepší rozhodnutí ohledně příjmů, zákaznické zkušenosti a celkové efektivity.</p>
+    <button class="btn-primary mt-6">Začít</button>
+  </section>
+
+  <!-- Sekce partnerů -->
+  <section class="section">
+    <div class="flex justify-center items-center flex-wrap gap-10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="h-10" alt="Amazon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="h-10" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-10" alt="Google">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/IBM_logo.svg" class="h-10" alt="IBM">
+    </div>
+  </section>
+
+  <!-- Sekce Týmu -->
+  <section class="section bg-white">
+    <h2 class="text-2xl font-bold text-center mb-10">Seznamte se s týmem</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div class="card shadow-card text-center">
+        <img src="https://via.placeholder.com/100" class="w-24 h-24 mx-auto rounded-full mb-4" alt="CEO">
+        <h3 class="text-xl font-bold">Peg Legge</h3>
+        <p class="text-subtitle">CEO</p>
+      </div>
+      <div class="card shadow-card text-center">
+        <img src="https://via.placeholder.com/100" class="w-24 h-24 mx-auto rounded-full mb-4" alt="CTO">
+        <h3 class="text-xl font-bold">Richard Roe</h3>
+        <p class="text-subtitle">CTO</p>
+      </div>
+      <div class="card shadow-card text-center">
+        <img src="https://via.placeholder.com/100" class="w-24 h-24 mx-auto rounded-full mb-4" alt="Lead Designer">
+        <h3 class="text-xl font-bold">Jane Doe</h3>
+        <p class="text-subtitle">Hlavní designérka</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section bg-[var(--color-primary)] text-white text-center">
+    <p>&copy; 2025 MojeSpolečnost. Všechna práva vyhrazena.</p>
+  </footer>
+
 </body>
 </html>
